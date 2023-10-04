@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Style files-->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/menu.css" />
 
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,6 +22,12 @@
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+
+    <!--Swiper-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
 
     <title>
@@ -66,7 +72,91 @@
     </section>
 
     <!--About-->
-    <section class="section"></section>
+    <section id="about" class="section">
+      <div class="section-content nothero">
+        <h2>About us</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          corporis dolorem aperiam eligendi rerum ab labore doloremque, facere,
+          in laudantium ipsum necessitatibus culpa ipsam voluptate quam tempore
+          velit totam voluptatibus! Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Consequatur beatae laudantium quaerat at placeat.
+          Nihil pariatur omnis quae molestias, doloribus sequi saepe repudiandae
+          cum nulla temporibus. Dolore illo numquam non?
+        </p>
+
+        <div class="services-container">
+          <div class="service">
+            <img src="assets/img/facebook.png" alt="" />
+            <h4>Facebook Ads</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              autem dolorum voluptate, nostrum at itaque molestias dicta ipsam
+              consequatur sequi.
+            </p>
+          </div>
+
+          <div class="service">
+            <img src="assets/img/googleads.png" alt="" />
+            <h4>Google Ads</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              autem dolorum voluptate, nostrum at itaque molestias dicta ipsam
+              consequatur sequi.
+            </p>
+          </div>
+
+          <div class="service">
+            <img src="assets/img/seo.png" alt="" />
+            <h4>SEO</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+              autem dolorum voluptate, nostrum at itaque molestias dicta ipsam
+              consequatur sequi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Testimonials-->
+    <section id="testimonials" class="section">
+      <div class="section-content">
+        <h2>Testimonials</h2>
+
+        <!--Slider-->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--Swiper-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        speed: 400,
+        spaceBetween: 100,
+        type: "bullets",
+        slidesPerView: 3,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 
     <script src="assets/js/main.js"></script>
   </body>

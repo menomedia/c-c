@@ -8,6 +8,8 @@
 
 :root {
     --desktopSize: 1300px;
+    --blueCol: rgba(0,89,126,1);
+    --gardient: linear-gradient(150deg, rgba(50, 185, 240, 1) 10%, rgba(0,89,126,1) 100%);
 }
 
 body {
@@ -15,20 +17,51 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #FEFEFF;
 }
 
 .section {
     width: 100%;
     height: 100vh;
     position:relative;
+    display: flex;
+    justify-content: center;
 }
 
 .section-content {
     width: 100%;
     max-width: var(--desktopSize);
     z-index: 2;
+    /* border:1px solid red; */
 }
 
+.section-content h2 {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    color: var(--blueCol);
+}
+
+.nothero {
+    margin-top: 100px;
+}
+
+.nothero h2::before {
+    content: "";
+    display: flex;
+    position: relative;
+    width: 70px;
+    height: 5px;
+    background:var(--gardient);
+    margin:0px 20px 0px 0px;
+    border-radius: 4px;
+}
+
+.nothero p {
+    font-size: 18px;
+    line-height: 35px;
+    padding:30px 90px;
+}
 
 /* Header */ 
 header {
@@ -64,16 +97,10 @@ header {
     width: 80px;
 }
 
-.hamburger-menu p {
-    color:#fff;
-    font-size: 18px;
-}
-
-
 
 /* Hero section */
 #hero {
-    background: linear-gradient(150deg, rgba(50, 185, 240, 1) 10%, rgba(0,89,126,1) 100%);
+    background: var(--gardient);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,6 +125,7 @@ header {
 #hero h2 {
     font-size: 70px;
     line-height: 90px;
+    color: #fff;
 }
 
 #hero p {
@@ -112,4 +140,55 @@ header {
     color:#fff;
     border:1px solid #fff;
     border-radius: 4px;
+}
+
+
+/* About us */
+
+.services-container {
+    display: flex;
+    align-items: center;
+    margin:30px 90px;
+    gap:30px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    max-width: 400px;
+    border-radius: 4px;
+    border:1px solid rgba(0, 0, 0, 0.137);
+    overflow: hidden;
+    padding:20px;
+}
+
+.service img {
+    width: 100%;
+    height: 170px;
+    border-radius: 4px;
+}
+
+.service h4 {
+    padding:5px 0px;
+}
+
+.service p {
+    font-size: 14px;
+    line-height: 20px;
+    padding:0px;
+    text-align: center;
+}
+
+/* Testimonials */
+#testimonials h2 {
+    justify-content: center;
+}
+
+#testimonials .swiper {
+    margin:30px 0px;
+}
+
+#testimonials .swiper-slide {
+    border:1px solid red;
 }
