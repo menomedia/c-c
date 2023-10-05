@@ -1,15 +1,15 @@
 /* Global */
 * {
     font-family: 'Poppins', sans-serif;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 :root {
     --desktopSize: 1300px;
-    --blueCol: rgba(0,89,126,1);
-    --gardient: linear-gradient(150deg, rgba(50, 185, 240, 1) 10%, rgba(0,89,126,1) 100%);
+    --blueCol: rgba(0, 89, 126, 1);
+    --gardient: linear-gradient(150deg, rgba(50, 185, 240, 1) 10%, rgba(0, 89, 126, 1) 100%);
 }
 
 body {
@@ -23,7 +23,7 @@ body {
 .section {
     width: 100%;
     height: 100vh;
-    position:relative;
+    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -52,18 +52,18 @@ body {
     position: relative;
     width: 70px;
     height: 5px;
-    background:var(--gardient);
-    margin:0px 20px 0px 0px;
+    background: var(--gardient);
+    margin: 0px 20px 0px 0px;
     border-radius: 4px;
 }
 
 .nothero p {
     font-size: 18px;
     line-height: 35px;
-    padding:30px 90px;
+    padding: 30px 90px;
 }
 
-/* Header */ 
+/* Header */
 header {
     position: absolute;
     top: 0;
@@ -108,18 +108,18 @@ header {
 }
 
 .bg-img img {
-    padding:0px 100px;
+    padding: 0px 100px;
     width: 100%;
     opacity: .4;
     position: absolute;
     bottom: 0;
-    left:0px;
+    left: 0px;
     filter: brightness(0) invert(1);
 }
 
 
 #hero .section-content {
-    color:#fff;
+    color: #fff;
 }
 
 #hero h2 {
@@ -131,14 +131,14 @@ header {
 #hero p {
     font-size: 18px;
     max-width: 600px;
-    margin:30px 0px 60px;
+    margin: 30px 0px 60px;
 }
 
 #hero a {
-    padding:10px 20px;
+    padding: 10px 20px;
     text-decoration: none;
-    color:#fff;
-    border:1px solid #fff;
+    color: #fff;
+    border: 1px solid #fff;
     border-radius: 4px;
 }
 
@@ -148,19 +148,19 @@ header {
 .services-container {
     display: flex;
     align-items: center;
-    margin:30px 90px;
-    gap:30px;
+    margin: 30px 90px;
+    gap: 30px;
 }
 
 .service {
     display: flex;
     flex-direction: column;
-    align-items: center;  
+    align-items: center;
     max-width: 400px;
     border-radius: 4px;
-    border:1px solid rgba(0, 0, 0, 0.137);
+    border: 1px solid rgba(0, 0, 0, 0.137);
     overflow: hidden;
-    padding:20px;
+    padding: 20px;
 }
 
 .service img {
@@ -170,25 +170,227 @@ header {
 }
 
 .service h4 {
-    padding:5px 0px;
+    padding: 5px 0px;
 }
 
 .service p {
     font-size: 14px;
     line-height: 20px;
-    padding:0px;
+    padding: 0px;
     text-align: center;
 }
 
-/* Testimonials */
-#testimonials h2 {
+
+/* Clients */
+#clients {
+    height: 100%;
+    margin-bottom: 200px;
+}
+
+#clients h2 {
     justify-content: center;
+    margin:100px 0px;
+}
+
+#clients .section-content {
+    height: unset;
+}
+
+
+#clients .imgs-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:30px;
+}
+
+#clients .imgs-container .work-done {
+    padding:20px;
+    background-color: var(--blueCol);
+    border-radius: 4px;
+    height: max-content;
+}
+
+#clients .imgs-container img {
+    max-width: 350px;
+    border-radius: 4px;
+}
+
+/* Testimonials */
+#testimonials {
+    background-color: #424242;
+    color: #fff;
+    height: max-content;
+    padding-bottom: 100px;
+}
+
+#testimonials h2 {
+    margin: 100px 0px;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+}
+
+#testimonials h2::after {
+    content: "";
+    width: 100px;
+    height: 5px;
+    background: var(--gardient);
+    margin: 0px 20px 0px 0px;
+    border-radius: 4px;
 }
 
 #testimonials .swiper {
-    margin:30px 0px;
+    margin: 30px 0px;
 }
 
 #testimonials .swiper-slide {
-    border:1px solid red;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: var(--gardient);
+    border-radius: 4px;
+    padding: 20px;
+}
+
+#testimonials .swiper-slide p {
+    padding: 10px 0px 20px 0px;
+}
+
+
+#testimonials .swiper-slide h3 {
+    color: rgb(0, 194, 253);
+}
+
+#testimonials .swiper-pagination {
+    padding-top: 100px;
+}
+
+
+#testimonials .swiper-button-next,
+#testimonials .swiper-button-prev{
+    color: rgb(0, 194, 253) !important;
+    padding:0px 80px;
+}
+
+#testimonials .swiper-pagination .swiper-pagination-bullet{
+    background-color: white;
+    width: 10px;
+    height: 10px;
+}
+
+
+/* Contact */
+#contact {
+    background: var(--blueCol);
+}
+
+#contact .section-content {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contact .section-content .contact-form-container {
+    width: 80%;
+    margin-left: 100px;
+}
+
+#contact .section-content .contact-form-container h3 {
+    margin:0px 0px 20px 5px;
+    font-size: 24px;
+    color: #fff;
+}
+
+#contact .section-content .contact-form-container .form div {
+    display: flex;
+    flex-direction: row;
+}
+
+#contact .section-content .contact-form-container input {
+    width: 50%;
+    margin: 5px;
+    padding:15px;
+    border-radius: 5px;
+    border:none;
+    background-color: #F1F1F1;
+    font-size: 16px;
+}
+
+#contact button{
+    padding:10px;
+    background-color: transparent;
+    border:1px solid #f1f1f1;
+    color: #f1f1f1;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    width: 50%;
+    margin: 5px;
+    border-radius: 4px;
+}
+
+/* #contact button::before {
+    content: "\f1d8";
+    font-family: 'Font Awesome\ 5 Free';
+    color: white;
+    width: 10px;
+    height: 10px;
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+} */
+
+#contact .section-content .contact-form-container textarea {
+    background-color: #F1F1F1;
+    width: 100%;
+    border-radius: 4px;
+    margin: 5px;
+    border: none;
+    height: 200px;
+    padding:15px;
+    font-size: 16px;
+    
+}
+
+
+#contact .logo-container {
+    padding-bottom: 50px;
+}
+
+
+#contact .infodetails-container, 
+#contact .socials-container {
+    color: #fff;
+    padding-left: 15px;
+}
+
+#contact .infodetails-container a {
+    margin-top: 10px;
+    display: block;
+    color: #F1F1F1;
+    text-decoration: none;
+    transform: .2s;
+}
+
+#contact .infodetails-container a:hover{ 
+    opacity: .8;
+}
+
+
+#contact .socials-container {
+    margin-top: 30px;
+}
+
+#contact .socials-container .socials{
+    font-size: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+#contact .socials-container .socials i {
+    margin: 0px 20px 20px 0px;
 }
