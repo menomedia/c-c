@@ -1,10 +1,92 @@
+/* Mobile Menu */
+.mobile-menu {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    right: 0px;
+    width: 0px;
+    top: 0;
+    height: 100vh;
+    background-color: white;
+    z-index: 3;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.mobile-menu.active {
+    width: 300px;
+}
+
+
+.mobile-menu a {
+    transition: .2;
+}
+
+.mobile-menu a:hover {
+    opacity: .8;
+}
+
+.mobile-menu .menu-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu .menu-items a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px 0px;
+    color: var(--blueCol);
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+.mobile-menu .menu-items a::after {
+    content: "";
+    width: 30px;
+    height: 4px;
+    display: block;
+    position: relative;
+    background: var(--blueCol);
+    border-radius: 4px;
+    margin: 0px 10px;
+}
+
+.mobile-menu .first a {
+    color: #000;
+    text-decoration: none;
+}
+
+.mobile-menu .info {
+    margin: 50px 15px 0px 0px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu .info a {
+    margin-top: 10px;
+}
+
+.mobile-menu .info .socials {
+    margin: 10px 0px;
+}
+
+.mobile-menu .info .socials a i {
+    font-size: 32px;
+    margin: 5px;
+}
+
+/**/
+
 .hamburger-menu {
     display: flex;
     align-items: center;
 }
 
 .hamburger-menu p {
-    color:#fff;
+    color: #fff;
     font-size: 20px;
     padding-right: 10px;
 }
@@ -13,6 +95,7 @@
     width: 30px;
     height: 20px;
     position: relative;
+    display: block;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -22,6 +105,13 @@
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
+    z-index: 4;
+}
+
+#hamburger.active {
+    position: absolute;
+    right: 250px;
+    top: 30px;
 }
 
 #hamburger .firstline, #hamburger .secondline, #hamburger .thirdline {
@@ -44,18 +134,41 @@
 }
 
 /* Hamburger */
+#hamburger.active .firstline {
+    top: 5px;
+    transform: rotate(45deg);
+    border: 1px solid black;
+}
+
+#hamburger.active .secondline {
+    top: 5px;
+    transform: rotate(-45deg);
+    border: 1px solid black;
+}
+
+#hamburger.active .thirdline {
+    top: 20px;
+    margin-left: 50%;
+    width: 50% !important;
+    opacity: 0;
+}
+
+
 #hamburger .firstline {
     top: 0px;
+    border: 1px solid #fff;
 }
 
 #hamburger .secondline {
     top: 10px;
+    border: 1px solid #fff;
 }
 
 #hamburger .thirdline {
     top: 20px;
     margin-left: 50%;
     width: 50% !important;
+    opacity: 1;
 }
 
 

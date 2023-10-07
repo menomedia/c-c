@@ -6,6 +6,9 @@
     <!--Style files-->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/menu.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/wavy.css" />
+    <link rel="stylesheet" href="assets/css/loader.css">
 
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,6 +27,15 @@
       referrerpolicy="no-referrer"
     />
 
+    <!--AOS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!--Swiper-->
     <link
       rel="stylesheet"
@@ -35,6 +47,12 @@
     </title>
   </head>
   <body>
+
+    <!--Main loader-->
+    <div class="loader">
+      <img src="assets/img/Agency_Logo.jpg" alt="">
+    </div>
+
     <!--Header-->
     <header>
       <div class="logo-container">
@@ -53,17 +71,56 @@
       </div>
     </header>
 
+    <!--Mobile menu-->
+    <div class="mobile-menu">
+      <div class="first">
+        <div class="menu-items">
+          <a href="#about">About</a>
+          <a href="#clients">Clients</a>
+          <a href="#testimonial">Testimonials</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="info">
+          <a href="mailto:diwanhitarth18@gmail.com">
+            diwanhitarth18@gmail.com
+          </a>
+          <a href="tel:+919904169797">+91 9904169797 </a>
+
+          <div class="socials">
+            <a
+              href="https://instagram.com/connection.catalysts"
+              target="_blank"
+            >
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/connection-catalysts1/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="">
+              <i class="fa-brands fa-square-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Hero section -->
     <section id="hero" class="section">
       <div class="section-content">
-        <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
-        <p>
+        <h2 class="hero-h2"></h2>
+        <p data-aos="fade-up" data-aos-delay="5000">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
           excepturi deleniti non sint distinctio commodi ratione pariatur, modi
           consequatur sapiente impedit.
         </p>
 
-        <a class="contactBtn" href="#"> Contact Us </a>
+        <div data-aos="fade-up" data-aos-delay="3000">
+        <a class="contactBtn" href="#contact"> Contact Us </a>
+        </div>
       </div>
 
       <div class="bg-img">
@@ -71,11 +128,46 @@
       </div>
     </section>
 
+    <!-- Wave -->
+    <svg
+      class="editorial"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28 "
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <path
+          id="gentle-wave"
+          d="M-160 44c30 0 
+    58-18 88-18s
+    58 18 88 18 
+    58-18 88-18 
+    58 18 88 18
+    v44h-352z"
+        />
+      </defs>
+      <g class="parallax1">
+        <use xlink:href="#gentle-wave" x="50" y="3" fill="transparent" />
+      </g>
+      <g class="parallax2">
+        <use xlink:href="#gentle-wave" x="50" y="0" fill="transparent" />
+      </g>
+      <g class="parallax3">
+        <use xlink:href="#gentle-wave" x="50" y="9" fill="transparent" />
+      </g>
+      <g class="parallax4">
+        <use xlink:href="#gentle-wave" x="50" y="6" fill="#fff" />
+      </g>
+    </svg>
+
+    <!---->
+
     <!--About-->
     <section id="about" class="section">
       <div class="section-content nothero">
-        <h2>About us</h2>
-        <p>
+        <h2 data-aos="fade-right" data-aos-delay="200">About us</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
           corporis dolorem aperiam eligendi rerum ab labore doloremque, facere,
           in laudantium ipsum necessitatibus culpa ipsam voluptate quam tempore
@@ -85,7 +177,7 @@
           cum nulla temporibus. Dolore illo numquam non?
         </p>
 
-        <div class="services-container">
+        <div class="services-container" data-aos="fade-up" data-aos-delay="200">
           <div class="service">
             <img src="assets/img/facebook.png" alt="" />
             <h4>Facebook Ads</h4>
@@ -122,34 +214,34 @@
     <!--Client Results-->
     <section id="clients" class="section">
       <div class="section-content">
-        <h2>Let our work speak for us</h2>
+        <h2 data-aos="fade-up" data-aos-delay="500">Let our work speak for us</h2>
         <div class="imgs-container">
-          <div class="work-done">
+          <div class="work-done" data-aos="fade-up" data-aos-delay="500">
             <img src="assets/img/client1.png" alt="" />
           </div>
-          <div class="work-done">
+          <div class="work-done" data-aos="fade-up" data-aos-delay="700">
             <img src="assets/img/client2.png" alt="" />
           </div>
 
-          <div class="work-done">
+          <div class="work-done" data-aos="fade-up" data-aos-delay="900">
             <img src="assets/img/client8.png" alt="" />
           </div>
-          <div class="work-done">
+          <div class="work-done" data-aos="fade-up" data-aos-delay="1100">
             <img src="assets/img/client4.png" alt="" />
           </div>
-          <div class="work-done">
+          <div class="work-done" data-aos="fade-up" data-aos-delay="1300">
             <img src="assets/img/client5.png" alt="" />
           </div>
-          <div class="work-done">
+          <div class="work-done" data-aos="fade-up" data-aos-delay="1500">
             <img src="assets/img/client3.png" alt="" />
           </div>
-          <div class="work-done">
+          <div class="work-done" data-aos="fade-up" data-aos-delay="1700">
             <img src="assets/img/client7.png" alt="" />
           </div>
-          <div class="work-done">
+          <div class="work-done" data-aos="fade-up" data-aos-delay="1800">
             <img src="assets/img/client6.png" alt="" />
           </div>
-          <div class="work-done">
+          <div class="work-done" data-aos="fade-up" data-aos-delay="2000">
             <img src="assets/img/client9.png" alt="" />
           </div>
         </div>
@@ -159,10 +251,10 @@
     <!--Testimonials-->
     <section id="testimonials" class="section">
       <div class="section-content">
-        <h2>Testimonials</h2>
+        <h2 data-aos="fade-up" data-aos-delay="500">Testimonials</h2>
 
         <!--Slider-->
-        <div class="swiper">
+        <div class="swiper" data-aos="fade" data-aos-delay="500">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -227,9 +319,22 @@
         <div class="swiper-button-next"></div>
       </div>
     </section>
+    <div class="wave-container"></div>
 
     <!--Contact Form-->
-    <div id="contact" class="section">
+    <div id="contact" class="section" data-aos="fade-up" data-aos-delay="500">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
       <div class="section-content">
         <div class="information-container">
           <div class="logo-container">
@@ -240,51 +345,103 @@
           </div>
           <div class="infodetails-container">
             <h4>Contact us</h4>
-            <a
-              href="mailto:diwanhitarth18@gmail.com
-        "
+            <a href="mailto:diwanhitarth18@gmail.com"
               ><i class="fa-solid fa-envelope"></i> diwanhitarth18@gmail.com
             </a>
-            <a href="tel:+919904169797"><i class="fa-solid fa-phone"></i> +91 9904169797 </a>
+            <a href="tel:+919904169797"
+              ><i class="fa-solid fa-phone"></i> +91 9904169797
+            </a>
           </div>
 
           <div class="socials-container">
             <h4>You can also find us here</h4>
             <div class="socials">
-              <i class="fa-brands fa-square-facebook"></i>
-              <i class="fa-brands fa-square-instagram"></i>
-              <i class="fa-brands fa-square-twitter"></i>
-              <!-- <i class="fa-brands fa-square-facebook"></i>
-              <i class="fa-brands fa-square-facebook"></i>
-              <i class="fa-brands fa-square-facebook"></i> -->
+              <a
+                href="https://instagram.com/connection.catalysts"
+                target="_blank"
+              >
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/connection-catalysts1/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-square-twitter"></i>
+              </a>
             </div>
           </div>
         </div>
 
         <div class="contact-form-container">
           <h3>Contact us without any cost</h3>
-          <div class="form">
-            <div>
-              <input type="text" name="name" placeholder="Name" />
-              <input type="phone" name="phone" placeholder="Phone" />
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <!-- <input type="hidden" name="access_key" value="a169139a-b2aa-4575-9def-1fb830f16838"> -->
+            <div class="form">
+              <div>
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="phone" name="phone" placeholder="Phone" required />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  required
+                />
+                <input type="text" name="company" placeholder="Company" />
+              </div>
+              <div>
+                <textarea
+                  name="message"
+                  id=""
+                  placeholder="Could you help me with..."
+                ></textarea>
+              </div>
+              <button><i class="fa-solid fa-paper-plane"></i> Send</button>
             </div>
-            <div>
-              <input type="email" name="email" placeholder="E-mail" />
-              <input type="text" name="company" placeholder="Company" />
-            </div>
-            <div>
-              <textarea
-                name="message"
-                id=""
-                placeholder="Could you help me with..."
-              ></textarea>
-            </div>
-            <!-- <input type="submit" name="submit" value="Send"> -->
-            <button><i class="fa-solid fa-paper-plane"></i> Send</button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
+
+    <footer>
+      <p>Connection Catalysts &copy; 2023 </p>
+    </footer>
+    <!--AOS-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      AOS.init({ once: true });
+    </script>
+
+    <!--Typeit-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.0.2/typeit.js"
+      integrity="sha512-df695gEYu6owulTtmAckQ+MeW6sYCsM1vd1zG9OGhVO/5QGC9N0uuMkEaaK5xcsh+CumzL920fEitS5VFctKyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      setTimeout(()=>{
+      new TypeIt(".hero-h2", {
+        strings: "Lorem ipsum dolor sit amet, consectetur.",
+        speed: 80,
+        waitUntilVisible: true,
+      }).go();
+    },3000)
+    </script>
+
+    <!--Form-->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 
     <!--Swiper-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
