@@ -1,6 +1,13 @@
+window.addEventListener("load", () => {
+  window.scroll({
+    top: 0,
+    behavior:'smooth'
+  })
+})
+
 var ham = document.getElementById("hamburger");
 var sidebar = document.querySelector(".mobile-menu");
-var header = document.querySelector("header")
+var header = document.querySelector("header");
 
 var isOpen = false;
 ham.addEventListener("click", () => {
@@ -13,3 +20,16 @@ ham.addEventListener("click", () => {
     sidebar.classList.remove("active");
   }
 });
+
+
+
+/* For mobile devices remove delay */
+var aosCont = document.querySelectorAll("[data-aos]");
+
+window.onload = function () {
+  if (window.innerWidth < 992) {
+    aosCont.forEach((x) => {
+      x.removeAttribute("data-aos-delay")
+    })
+  }
+}

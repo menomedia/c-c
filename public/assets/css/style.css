@@ -10,6 +10,7 @@
 :root {
     --desktopSize: 1300px;
     --blueCol: #00597e;
+    --bblue: #00597e;
     --gardient: linear-gradient(150deg, #32b9f0 10%, rgba(0, 89, 126, 1) 100%);
 }
 
@@ -18,7 +19,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--blueCol);
+    background-color: var(--bblue);
 }
 
 .section {
@@ -158,7 +159,12 @@ header {
 /* About us */
 
 #about {
-    background-color: #FEFEFF;
+    /* background-color: #FEFEFF; */
+    color: #fff;
+}
+
+#about h2 {
+    color: #fff;
 }
 
 .services-container {
@@ -174,22 +180,24 @@ header {
     align-items: center;
     max-width: 400px;
     border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.137);
+    border: 2px solid #008BA5;
     overflow: hidden;
-    padding: 20px;
+    padding: 30px;
 }
 
 .service img {
     width: 100%;
     width: auto;
-    height: 170px;
+    height: 200px;
     border-radius: 4px;
     margin-left: 20px;
+    filter: hue-rotate(10deg) saturate(100);
+    opacity: .3;
 }
 
 .service h4 {
     padding: 10px;
-    color: var(--blueCol);
+    color: #fff;
     font-size: 20px;
 }
 
@@ -205,12 +213,13 @@ header {
 #clients {
     height: 100%;
     padding-bottom: 200px;
-    background-color: #FEFEFF;
+    /* background-color: #FEFEFF; */
 }
 
 #clients h2 {
     justify-content: center;
     margin: 100px 0px;
+    color: #fff;
 }
 
 #clients .section-content {
@@ -228,7 +237,7 @@ header {
 
 #clients .imgs-container .work-done {
     padding: 20px;
-    background-color: var(--blueCol);
+    background-color: #F1F1F1;
     border-radius: 4px;
     height: max-content;
 }
@@ -236,6 +245,28 @@ header {
 #clients .imgs-container img {
     max-width: 350px;
     border-radius: 4px;
+}
+
+
+.calendlyBtn {
+    color: var(--bblue);
+    background-color: #fff;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    margin: 50px auto;
+    width: max-content;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transform: .2s;
+    font-size: 20px;
+}
+
+.calendlyBtn:hover {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: transparent;
 }
 
 /* Testimonials */
@@ -355,17 +386,6 @@ header {
     border-radius: 4px;
 }
 
-/* #contact button::before {
-    content: "\f1d8";
-    font-family: 'Font Awesome\ 5 Free';
-    color: white;
-    width: 10px;
-    height: 10px;
-    display: block;
-    font-size: 10px;
-    font-weight: 400;
-} */
-
 #contact .section-content .contact-form-container textarea {
     background-color: #F1F1F1;
     width: 100%;
@@ -377,7 +397,6 @@ header {
     font-size: 16px;
 
 }
-
 
 #contact .logo-container {
     padding-bottom: 50px;
@@ -424,9 +443,133 @@ header {
     opacity: .8;
 }
 
-
 footer {
     color: #fff;
     font-weight: bold;
     padding: 20px 0px;
+}
+
+/* Responsive */
+@media(max-width:1260px) {
+    header {
+        padding: 30px 50px 0px 50px;
+    }
+
+    .section-content {
+        padding: 0px 50px;
+    }
+
+    .service img {
+        height: 150px;
+    }
+}
+
+
+
+@media(max-width:992px) {
+    #hero h2 {
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    #hero p {
+        font-size: 16px;
+    }
+
+    #about h2 {
+        padding-bottom: 30px;
+        flex-direction: column-reverse;
+    }
+
+    #about.section {
+        height: unset;
+    }
+
+    #about .section-content {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .nothero p {
+        padding: 0px 0px 20px 0px;
+    }
+
+    .services-container {
+        margin: 0px;
+        flex-direction: column;
+    }
+
+    #clients h2 {
+        text-align: center;
+    }
+
+    #clients .imgs-container {
+        justify-content: center;
+    }
+
+    #testimonials .swiper-button-next,
+    #testimonials .swiper-button-prev {
+        padding: 0px;
+    }
+
+    #contact {
+        height: unset;
+    }
+
+    #contact .section-content .contact-form-container h3 {
+        margin-top: 100px;
+    }
+
+    #contact .section-content {
+        flex-direction: column-reverse;
+    }
+
+    #contact .section-content .contact-form-container {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .information-container, .contact-form-container {
+        margin-top: 50px;
+    }
+
+    footer {
+        padding-top: 100px;
+    }
+}
+
+@media(max-width:500px) {
+    header {
+        padding: 30px 20px 0px 20px;
+    }
+
+    header .logo-container p {
+        display: none;
+    }
+
+    #hero h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .section-content {
+        padding: 0px 20px;
+    }
+
+    #clients .imgs-container img {
+        max-width: 300px;
+    }
+
+    #testimonials .swiper-button-next,
+    #testimonials .swiper-button-prev {
+        display: none;
+    }
+}
+
+@media(max-width:400px) {
+
+    #clients .imgs-container img {
+        max-width: 200px;
+    }
+
 }
